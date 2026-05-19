@@ -302,8 +302,24 @@
       display: block;
     }
 
-    /* ── HERO IMAGE BLOCK (desktop) ── */
-    .hero-img-block { display: none; }
+    /* ── HERO IMAGE BLOCK ── */
+    /* Visible on mobile, repositioned on desktop */
+    .hero-img-block {
+      display: block;
+      position: relative;
+      margin-top: 28px;
+    }
+    .hero-img-main {
+      width: 100%;
+      height: 260px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .hero-img-main img { width: 100%; height: 100%; object-position: center top; }
+    /* Stat badges: desktop only */
+    .hero-img-badge,
+    .hero-img-badge2 { display: none; }
 
     /* ── ABOUT ── */
     .about-section { padding: 80px 0; }
@@ -804,10 +820,11 @@
       }
       .hero-stat strong { font-size: 34px; }
 
-      /* Hero image block desktop */
+      /* Hero image block desktop — override mobile */
       .hero-img-block {
         display: block;
         position: relative;
+        margin-top: 0;
       }
       .hero-img-main {
         width: 100%;
@@ -819,6 +836,7 @@
       .hero-img-main img { width: 100%; height: 100%; object-position: center top; }
 
       .hero-img-badge {
+        display: block;
         position: absolute;
         bottom: -20px;
         left: -24px;
@@ -847,6 +865,7 @@
       }
 
       .hero-img-badge2 {
+        display: block;
         position: absolute;
         top: 20px;
         right: -20px;
