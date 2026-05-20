@@ -311,6 +311,21 @@
     .hero-img-badge,
     .hero-img-badge2 { display: none; }
 
+    /* Mobile-only about image */
+    .about-img-mobile {
+      width: 100%;
+      height: 220px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .about-img-mobile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
     /* Mobile-only hero photos */
     .hero-img-mobile-clinic,
     .hero-img-mobile-mouth {
@@ -914,6 +929,7 @@
         align-items: center;
       }
       .about-img { display: block; height: 480px; }
+      .about-img-mobile { display: none; }
 
       /* SERVICES */
       .services { padding: 110px 0; }
@@ -1073,10 +1089,6 @@
               </div>
             </div>
 
-            <!-- MOBILE ONLY: dental/mouth photo after stats -->
-            <div class="hero-img-mobile-mouth">
-              <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900&q=85&fit=crop" alt="Dental Care" />
-            </div>
           </div>
 
           <!-- Desktop image block (hidden on mobile) -->
@@ -1105,6 +1117,10 @@
             <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900&q=85&fit=crop" alt="LUMIDENT Clinic Interior" />
           </div>
           <div class="reveal d1">
+            <!-- MOBILE ONLY: mouth photo appears with scroll animation -->
+            <div class="about-img-mobile reveal">
+              <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900&q=85&fit=crop" alt="Dental Care" />
+            </div>
             <p class="section-label">01 — About the Clinic</p>
             <h2 class="section-title">Dentistry that<br>feels <em>different.</em></h2>
             <div class="text-stack" style="margin-top: 24px;">
