@@ -321,6 +321,26 @@
     .hero-img-badge,
     .hero-img-badge2 { display: none; }
 
+    /* Mobile-only hero photos */
+    .hero-img-mobile-clinic,
+    .hero-img-mobile-mouth {
+      width: 100%;
+      height: 220px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 24px;
+    }
+    .hero-img-mobile-clinic img,
+    .hero-img-mobile-mouth img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Desktop image block hidden on mobile */
+    .hero-img-block { display: none; }
+
     /* ── ABOUT ── */
     .about-section { padding: 60px 0; }
 
@@ -821,12 +841,14 @@
       }
       .hero-stat strong { font-size: 34px; }
 
-      /* Hero image block desktop — override mobile */
+      /* Desktop: show main image block, hide mobile-only photos */
       .hero-img-block {
         display: block;
         position: relative;
         margin-top: 0;
       }
+      .hero-img-mobile-clinic,
+      .hero-img-mobile-mouth { display: none; }
       .hero-img-main {
         width: 100%;
         height: 520px;
@@ -1039,6 +1061,12 @@
               <a href="#book" class="btn">Book Free Consultation</a>
               <a href="tel:+302101234567" class="btn btn-outline">Call Clinic</a>
             </div>
+
+            <!-- MOBILE ONLY: clinic photo after buttons -->
+            <div class="hero-img-mobile-clinic">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=900&q=85&fit=crop&crop=top" alt="LUMIDENT Clinic" />
+            </div>
+
             <div class="hero-stats">
               <div class="hero-stat">
                 <strong>3k+</strong>
@@ -1053,9 +1081,14 @@
                 <span>Patient Satisfaction</span>
               </div>
             </div>
+
+            <!-- MOBILE ONLY: dental/mouth photo after stats -->
+            <div class="hero-img-mobile-mouth">
+              <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900&q=85&fit=crop" alt="Dental Care" />
+            </div>
           </div>
 
-          <!-- Desktop image block -->
+          <!-- Desktop image block (hidden on mobile) -->
           <div class="hero-img-block">
             <div class="hero-img-main">
               <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=900&q=85&fit=crop&crop=top" alt="LUMIDENT Clinic" />
